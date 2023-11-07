@@ -1,0 +1,23 @@
+<head>
+    {{ $css := resources.Get "css/style.scss" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href={{ $css.RelPermalink }}/>
+    <title>{{ .Title }} | TechCopySolutions</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    {{ if eq .Params.sitemapIgnore "true" }}
+    <meta name="robots" content="noindex" />
+    {{ end }}
+    {{- with .Params.description -}}
+    <meta name="description" content="{{ . }}"/>
+    {{- else -}}
+    <meta name="description" content="{{ .Title }}"/>
+    {{- end}}
+    <meta name="author" content="{{ .Site.Params.author }}"/>
+
+    <link rel="shortcut icon" href="/appicons/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/appicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="/appicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/appicons/apple-icon-180x180.png" type="image/png">
+    <link rel="icon" href="/appicons/512Pixel_logo.png" type="image/png">
+    <link rel="manifest" href="/manifest.json">
+</head>

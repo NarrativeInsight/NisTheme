@@ -1,0 +1,9 @@
+
+<section class="flex-item">
+    <div>
+        {{ .Inner | markdownify }}
+    </div>
+    <div class="flex-item-img">
+        <img src='{{ .Get "img" }}' alt='{{ .Get "alt" }}' width='{{ .Get "width" }}' />
+    </div>
+</section>

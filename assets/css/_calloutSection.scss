@@ -1,0 +1,7 @@
+
+// Use the default blockQuote indents, plus a little padding, and some color to call it out.
+.calloutSection {
+  // Top and bottom are squirrely. Zero gave the best result.
+  padding: 0px 17px 0px 17px;
+  background-color: aliceblue;
+}

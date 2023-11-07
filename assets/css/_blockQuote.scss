@@ -1,0 +1,24 @@
+
+// Draw a roomy box around the quote content.
+.blockQuoteSection {
+  margin: 40px 0;
+  padding: 1.2em 2.4em .7em;
+  border: 2px solid darkgrey;
+  box-shadow: 2px 2px 4px hsl(0, 0%, 0% / 20%);
+  text-indent: 1.2em;
+}
+
+// Center it in the space within the box.
+.openQuoteImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50px;
+}
+
+// Rejigger for smaller form factors.
+@media (min-width: 768px) {
+  .blockQuoteSection {
+    margin: 40px 60px;
+  }
+}

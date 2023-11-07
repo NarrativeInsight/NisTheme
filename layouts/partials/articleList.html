@@ -1,0 +1,11 @@
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+<section class="articles">
+    {{ range (.Paginator 5).Pages }}
+    <section class="article">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Summary }}</p>
+    </section>
+    {{ end }}
+    {{ template "_internal/pagination.html" . }}
+</section>

@@ -1,0 +1,18 @@
+/* From Build Websites with Hugo, puts list of articles to the left, neat idea but it didn't look good, too busy on-screen. */
+{{ define "main" }}
+  <div class="article-container">
+      <section class="article-list">
+          <h2>Articles</h2>
+          <ul>
+              {{ range (where .Site.RegularPages "Type" "in" "articles").ByDate.Reverse }}
+                <li><a href="{{ .RelPermalink}}">{{ .Title }}</a></li>
+              {{ end }}
+          </ul>
+      </section>
+
+      <section class="article">
+          <h2>{{ .Title }}</h2>
+          {{ .Content }}
+      </section>
+  </div>
+{{ end }}

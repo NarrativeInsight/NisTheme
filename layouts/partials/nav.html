@@ -1,0 +1,16 @@
+{{- $linkedIn := resources.Get "images/LinkedIn.png" }}
+{{- $search := resources.Get "images/MagnifyingGlass.png" }}
+<nav>
+    <a href="/">Home</a>
+    <a href="/whyme">Why&nbsp;Me</a>
+    <a href="/success">Success</a>
+    <a href="/services">Services</a>
+    <a href="/faq">FAQ</a>
+    <a href="/articles">Articles</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <span>
+        <a class="searchButton" href="/search"><img src="{{ $search.RelPermalink }}" width="25" height="25" alt="Search for website content" /></a>
+        <a class="linkedInButton" href="https://www.linkedin.com/in/chris-dole-25103518b/" target="_blank"><img src="{{ $linkedIn.RelPermalink }}" width="25" height="25" alt="LinkedIn B2B sales enablement profile" /></a>
+    </span>
+</nav>

@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+  <p class="searchForm">{{ .Title }}
+  <input class="searchField" type="search" id="searchField">
+  <button id="searchButton">Find</button>
+  <input id="allWords" type="checkbox">
+  <label for="allWords">All words</label>
+  </p>
+
+  <h3>Results</h3>
+  <div class="searchResults" id="output">
+      <p>Waiting for search input</p>
+  </div>
+
+  {{ $js := resources.Get "js/app.js" | minify | fingerprint }}
+  <script src="{{ $js.RelPermalink }}"></script>
+
+{{ end }}

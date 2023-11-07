@@ -1,0 +1,5 @@
+
+<footer class="footer">
+    <span>Copyright © {{now.Format "2006"}} Chris Dole</span> {{- range .Site.Data.contact.waysToContact }}  ⚬  <a href="{{ .url }}">{{ .label }}</a>{{- end -}}
+    <br/><span>Website powered by </span><a href="https://gohugo.io" target="_blank"><img class="hugoButton" src="{{ "images/hugo-logo-wide.svg" | relURL }}" height="20"></a>
+</footer>

@@ -1,0 +1,23 @@
+
+/* Same color scheme for the footer elements */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+/* Allow anchor links to flow/stack no matter the screen size */
+footer > a, span {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  line-height: 1.7;
+  font-size: 0.9em;
+}
+
+.hugoButton {
+  margin-bottom: 4px;
+}
+

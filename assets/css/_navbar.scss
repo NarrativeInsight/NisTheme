@@ -1,0 +1,42 @@
+/**
+ * Styles for the navigation bar.
+ */
+
+/* Same color scheme for navigation elements */
+nav {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+/* Set default flex direction to column, unless overridden by the media query */
+nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  line-height: 2.1;
+}
+
+/* Allow anchor links to flow/stack no matter the screen size */
+nav > a, img {
+  flex: 1;
+  text-decoration: none;
+  color: #fff;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.linkedInButton {
+  margin-bottom: 3px;
+}
+
+.searchButton {
+  margin-bottom: 3px;
+}
+
+/* Change flex direction to row if there's enough width */
+@media only screen and (min-width: 650px) {
+  nav {
+    flex-direction: row;
+  }
+}

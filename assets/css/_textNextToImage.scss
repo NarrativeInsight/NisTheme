@@ -1,0 +1,14 @@
+/* Simple styling to put text left and image right */
+
+.flex-item {
+  display:flex;
+  align-items: center;
+  margin-top: -17px;    // Bit of a hack, but it seems to get rid
+  margin-bottom: -17px; // of excess space above/below the content.
+  margin-right: 25px;
+}
+
+.flex-item-img {
+  flex-grow:0;
+  flex-shrink:0;
+}
