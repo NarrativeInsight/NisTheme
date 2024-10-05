@@ -1,16 +1,16 @@
 /**
- * Styles for the navigation bar.
+ * Styles for the menu bar in a <nav> tag context.
  */
 
 /* Same color scheme for navigation elements */
-nav {
+nav#mainMenu {
   background-color: #333;
   color: #fff;
   text-align: center;
 }
 
 /* Set default flex direction to column, unless overridden by the media query */
-nav {
+nav#mainMenu {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -18,7 +18,7 @@ nav {
 }
 
 /* Allow anchor links to flow/stack no matter the screen size */
-nav > a, img {
+nav#mainMenu > a, img {
   flex: 1;
   text-decoration: none;
   color: #fff;
@@ -36,7 +36,7 @@ nav > a, img {
 
 /* Change flex direction to row if there's enough width */
 @media only screen and (min-width: 650px) {
-  nav {
+  nav#mainMenu {
     flex-direction: row;
   }
 }
